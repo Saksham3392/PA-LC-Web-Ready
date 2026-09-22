@@ -30,3 +30,9 @@ footer{max-width:var(--max);margin:auto;padding:28px 24px 45px;border-top:1px so
 .code-view .tok-constant{color:#fb7185}
 .code-view .tok-operator{color:#f9a8d4}
 .code-view .tok-punctuation{color:#94a3b8}
+
+/* Question/problem cards */
+.problem-grid{min-height:120px}
+.problem{display:block!important;visibility:visible!important;opacity:1!important}
+.problem h3{color:var(--text)}
+.problem:focus{outline:2px solid var(--accent);outline-offset:2px}

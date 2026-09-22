@@ -1,4 +1,5 @@
-const data = window.PA_LC_DATA;
+const data = window.PA_LC_DATA || { files: [] };
+if (!Array.isArray(data.files)) data.files = [];
 const grid = document.getElementById("problemGrid");
 const filters = document.getElementById("filters");
 const search = document.getElementById("search");
@@ -12,7 +13,9 @@ const modalCode = document.getElementById("modalCode");
 let activeCategory = "All";
 let currentCode = "";
 
-const categories = ["All", ...new Set(data.files.map(x => x.category))];
+const categories = ["All", ...new Set(
+  data.files.map(x => x.category || "Other").filter(Boolean)
+)];
 
 document.getElementById("statProblems").textContent = data.files.length;
 document.getElementById("statTopics").textContent = categories.length - 1;
@@ -32,30 +35,52 @@ categories.forEach(cat => {
 });
 
 function render() {
-  const q = search.value.trim().toLowerCase();
+  const q = (search.value || "").trim().toLowerCase();
+
   const shown = data.files.filter(item => {
-    const matchesCategory = activeCategory === "All" || item.category === activeCategory;
-    const haystack = `${item.name} ${item.file} ${item.category}`.toLowerCase();
+    const category = item.category || "Other";
+    const name = item.name || "Untitled";
+    const file = item.file || "";
+    const matchesCategory = activeCategory === "All" || category === activeCategory;
+    const haystack = `${name} ${file} ${category}`.toLowerCase();
     return matchesCategory && (!q || haystack.includes(q));
   });
 
   resultCount.textContent = `Showing ${shown.length} of ${data.files.length} problems`;
   grid.innerHTML = "";
-  empty.hidden = shown.length !== 0;
 
   shown.forEach(item => {
     const card = document.createElement("article");
     card.className = "problem";
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("role", "button");
+
+    const category = item.category || "Other";
+    const name = item.name || "Untitled";
+    const file = item.file || "";
+    const lines = item.lines || (item.code ? item.code.split("\\n").length : 0);
+
     card.innerHTML = `
       <div class="problem-top">
-        <span class="badge">${escapeHtml(item.category)}</span>
-        <span class="lines">${item.lines} lines</span>
+        <span class="badge">${escapeHtml(category)}</span>
+        <span class="lines">${lines} lines</span>
       </div>
-      <h3>${escapeHtml(item.name)}</h3>
-      <p>${escapeHtml(item.file)}</p>`;
-    card.onclick = () => openModal(item);
+      <h3>${escapeHtml(name)}</h3>
+      <p>${escapeHtml(file)}</p>`;
+
+    const activate = () => openModal(item);
+    card.addEventListener("click", activate);
+    card.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        activate();
+      }
+    });
+
     grid.appendChild(card);
   });
+
+  empty.hidden = shown.length !== 0;
 }
 
 function openModal(item) {
@@ -211,3 +236,13 @@ function escapeHtml(s) {
 }
 
 render();
+
+window.addEventListener("error", function(e) {
+  if (!data.files.length) {
+    const msg = document.createElement("div");
+    msg.className = "empty";
+    msg.hidden = false;
+    msg.textContent = "Questions could not be loaded. Please refresh the page.";
+    grid.replaceChildren(msg);
+  }
+});
