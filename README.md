@@ -2,17 +2,9 @@
 
 <div align="center">
 
-  <!-- Animated Header Banner -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=24,25,26,27,28&height=220&section=header&text=Data%20Structures%20%26%20Algorithms&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38" width="100%" alt="Header Banner"/>
+  <h1>⚡ Data Structures & Algorithms</h1>
+  <p><b>Java Data Structures & Algorithms | Linked Lists, Searching, Sorting & Backtracking | Full-Stack Web Deployment</b></p>
 
-  <!-- Typing Effect Subtitle -->
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=61AFEF&center=true&vCenter=true&width=600&lines=Java+Data+Structures+%26+Algorithms;Singly%2C+Doubly+%26+Circular+Linked+Lists;Searching%2C+Sorting+%26+Backtracking;Full-Stack+Web+Deployment+Included" alt="Typing SVG" />
-  </a>
-
-  <br/><br/>
-
-  <!-- Status & Tech Stack Badges -->
   <p align="center">
     <img src="https://img.shields.io/badge/Language-Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java"/>
     <img src="https://img.shields.io/badge/Frontend-HTML5_%7C_CSS3_%7C_JS-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="Web Stack"/>
@@ -30,7 +22,6 @@
 * [Data Structures & Algorithms Topics](#-data-structures--algorithms-topics)
 * [Web & Deployment Configuration](#-web--deployment-configuration)
 * [Getting Started](#-getting-started)
-* [License](#-license)
 
 ---
 
