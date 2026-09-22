@@ -76,6 +76,7 @@ function render() {
     const category = item.category || "Other";
     const name = item.name || "Untitled";
     const file = item.file || "";
+    const leetcode = item.leetcode ? `LeetCode #${item.leetcode}` : "";
     const lines = item.lines || (item.code ? item.code.split("\\n").length : 0);
 
     card.innerHTML = `
@@ -83,7 +84,7 @@ function render() {
         <span class="badge">${escapeHtml(category)}</span>
         <span class="lines">${lines} lines</span>
       </div>
-      <h3>${escapeHtml(name)}</h3>
+      <h3>${escapeHtml(name)}${leetcode ? ` <span class="leetcode-badge">${escapeHtml(leetcode)}</span>` : ""}</h3>
       <p>${escapeHtml(file)}</p>`;
 
     const activate = () => openModal(item);
