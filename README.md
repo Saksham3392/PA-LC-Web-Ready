@@ -2,9 +2,14 @@
 
 <div align="center">
 
-  <h1>⚡ Data Structures & Algorithms</h1>
-  <p><b>Java Data Structures & Algorithms | Linked Lists, Searching, Sorting & Backtracking | Full-Stack Web Deployment</b></p>
+  <!-- Typing SVG Animation -->
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=61AFEF&center=true&vCenter=true&width=600&lines=Java+Data+Structures+%26+Algorithms;Singly%2C+Doubly+%26+Circular+Linked+Lists;Searching%2C+Sorting+%26+Backtracking;Full-Stack+Web+Deployment+Included" alt="Typing SVG" />
+  </a>
 
+  <br/><br/>
+
+  <!-- Status & Tech Stack Badges -->
   <p align="center">
     <img src="https://img.shields.io/badge/Language-Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java"/>
     <img src="https://img.shields.io/badge/Frontend-HTML5_%7C_CSS3_%7C_JS-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="Web Stack"/>
