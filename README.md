@@ -7,7 +7,7 @@
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=61AFEF&center=true&vCenter=true&width=600&lines=Java+Data+Structures+%26+Algorithms;Singly%2C+Doubly+%26+Circular+Linked+Lists;Searching%2C+Sorting+%26+Backtracking;Full-Stack+Web+Deployment+Included" alt="Typing SVG" />
   </a>
 
-  <br/><br/>
+<br/><br/>
 
   <!-- Status & Tech Stack Badges -->
   <p align="center">
@@ -22,11 +22,13 @@
 ---
 
 ## 📌 Table of Contents
-* [Overview](#-overview)
-* [Project Architecture](#-project-architecture)
-* [Data Structures & Algorithms Topics](#-data-structures--algorithms-topics)
-* [Web & Deployment Configuration](#-web--deployment-configuration)
-* [Getting Started](#-getting-started)
+
+- [Overview](#-overview)
+- [Project Architecture](#-project-architecture)
+- [Data Structures & Algorithms Topics](#-data-structures--algorithms-topics)
+- [Web & Deployment Configuration](#-web--deployment-configuration)
+- [Getting Started](#-getting-started)
+- [For Future AI / Maintainers](#-for-future-ai--maintainers)
 
 ---
 
@@ -43,14 +45,17 @@ It also includes a web interface (`index.html`, `style.css`, `script.js`) pre-co
 ```text
 ├── 📂 code/
 │   ├── 📂 Array/                 # Array algorithms & LeetCode problems
-│   ├── 📂 Backtracking/            # N-Queens, Permutations, Subsets
-│   ├── 📂 CircularLinkedList/     # Circular Linked List implementations
-│   ├── 📂 DoublyLinkedList/       # Doubly Linked List problems
-│   ├── 📂 Searching/              # Linear & Binary Search variations
-│   ├── 📂 SinglyLinkedList/       # Singly Linked List operations
-│   └── 📂 Sorting/                # Quick, Merge, Bubble, Selection Sort
-├── 📄 index.html                  # Frontend Entry Point
-├── 🎨 style.css                   # Custom Stylesheet
+│   ├── 📂 Backtracking/          # N-Queens, Permutations, Subsets
+│   ├── 📂 CircularLinkedList/    # Circular Linked List implementations
+│   ├── 📂 DoublyLinkedList/      # Doubly Linked List problems
+│   ├── 📂 Searching/             # Linear & Binary Search variations
+│   ├── 📂 SinglyLinkedList/     # Singly Linked List operations
+│   └── 📂 Sorting/               # Quick, Merge, Bubble, Selection Sort
+├── 📄 index.html                 # Frontend Entry Point
+├── 🎨 style.css                  # Custom Stylesheet
 ├── ⚡ script.js                   # Client-side Logic & Interactions
-├── 🐳 Dockerfile                  # Container Configuration
-└── 🌐 nginx.conf                  # Web Server Configuration
+├── 📊 data.js                    # Question data loaded by the website
+├── 🤖 AI_CONTEXT.md              # Guide for future AI/developers
+├── 🐳 Dockerfile                 # Container Configuration
+└── 🌐 nginx.conf                 # Web Server Configuration
+```

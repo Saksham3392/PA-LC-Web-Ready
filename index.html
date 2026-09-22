@@ -104,6 +104,12 @@
     </div>
   </div>
 
+  <!--
+    DATA/APP LOAD ORDER — IMPORTANT:
+    1. data.js contains the 65 Java question objects and creates window.PA_LC_DATA.
+    2. script.js reads that global and renders the cards, filters, search and modal.
+    Keep data.js BEFORE script.js or the library will appear empty.
+  -->
   <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
