@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Programming Abstraction using AI — Java. DSA and LeetCode-style Java solutions by Saksham Sheoran.">
+  <title>PA LC — Java DSA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-mark">☕</span>
+      <span>PA <b>LC</b></span>
+    </a>
+    <nav>
+      <a href="#topics">Topics</a>
+      <a href="#problems">Problems</a>
+      <a href="#about">About</a>
+      <a class="github" href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">JAVA • DSA • LEETCODE</div>
+        <h1>Programming<br><span>Abstraction</span> using AI</h1>
+        <p>A clean, searchable collection of Java implementations for Data Structures, Algorithms and LeetCode-style problems.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#problems">Explore problems ↓</a>
+          <a class="btn secondary" href="#topics">View topics</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="terminal-head"><i></i><i></i><i></i><span>PA-LC.java</span></div>
+        <pre><code><span class="kw">public class</span> <span class="cl">ProblemSolving</span> {
+  <span class="kw">public static void</span> <span class="fn">learn</span>() {
+    <span class="fn">practice</span>();
+    <span class="fn">solve</span>();
+    <span class="fn">improve</span>();
+  }
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="stats" id="topics">
+      <div><strong id="statProblems">0</strong><span>Java files</span></div>
+      <div><strong id="statTopics">0</strong><span>topics</span></div>
+      <div><strong>Java</strong><span>language</span></div>
+      <div><strong>∞</strong><span>learning</span></div>
+    </section>
+
+    <section class="section" id="problems">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">CODE LIBRARY</div>
+          <h2>Explore the collection</h2>
+        </div>
+        <div class="search-wrap">
+          <span>⌕</span>
+          <input id="search" type="search" placeholder="Search problems..." autocomplete="off">
+        </div>
+      </div>
+
+      <div class="filters" id="filters"></div>
+      <div class="result-meta"><span id="resultCount"></span></div>
+      <div class="problem-grid" id="problemGrid"></div>
+      <div class="empty" id="empty" hidden>No problems match your search.</div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="about-card">
+        <div class="eyebrow">ABOUT THE PROJECT</div>
+        <h2>Build fundamentals.<br>Then build speed.</h2>
+        <p>This repository focuses on strengthening Java, data structures, algorithms, recursion, backtracking, dynamic programming and interview problem-solving skills.</p>
+        <div class="roadmap">
+          <span>Arrays</span><b>→</b><span>Searching</span><b>→</b><span>Sorting</span><b>→</b><span>Linked Lists</span><b>→</b><span>Backtracking</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Saksham Sheoran</span>
+    <span>Keep Coding • Keep Learning • Keep Improving 🚀</span>
+  </footer>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head">
+        <div>
+          <span class="badge" id="modalCategory"></span>
+          <h3 id="modalTitle"></h3>
+          <small id="modalPath"></small>
+        </div>
+        <div class="modal-actions">
+          <button id="copyBtn" class="icon-btn" title="Copy code">Copy</button>
+          <button class="icon-btn close" data-close title="Close">×</button>
+        </div>
+      </div>
+      <pre class="code-view"><code id="modalCode"></code></pre>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
